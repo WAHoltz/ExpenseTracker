@@ -4,9 +4,10 @@ import "./Expenses.css";
 
 const Expenses = (props) => {
   let expenseItems = [];
-  props.items.map((expense) =>
+  props.items.map((expense, key) =>
     expenseItems.push(
       <ExpenseItem
+        key={key}
         title={expense.title}
         amount={expense.amount}
         date={expense.date}
