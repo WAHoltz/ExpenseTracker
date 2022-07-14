@@ -1,4 +1,5 @@
 import ExpenseItem from "./ExpenseItem";
+import ExpensesFilter from "./ExpensesFilter";
 import Card from "../UI/Card";
 import "./Expenses.css";
 
@@ -15,7 +16,12 @@ const Expenses = (props) => {
     )
   );
 
-  return <Card className="expenses">{expenseItems}</Card>;
+  return (
+    <div>
+      <ExpensesFilter />
+      <Card className="expenses">{expenseItems}</Card>
+    </div>
+  );
 };
 
 export default Expenses;
